@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 10px;
+	font-family: 'montserrat', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p{
+  color: black;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+.section-title{
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+}
+.section-title span{
+  color: #2a9614;
+}
+/* Hero Section */
+.hero{
+  background-image:url(../images/HeroBG.png);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.hero h1{
+  display: block;
+  width: fit-content;
+  font-size: 10rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal .5s ease forwards;
+  animation-delay: 1.3s;
+}
+.hero h1 span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: white;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 1s;
+}
+.hero .cta{
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 20px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+}
+.hero .cta:hover{
+  color: black;
+  background-color: white;
+}
+/* Hero Section End */
+
+/* Kultur */
+.kultur{
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.kultur-top p{
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: .05rem;
+}
+.kultur-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.kultur-item{
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url(../images/box.png);
+  background-size: cover;
+  margin: 10px 5%;
+  }
+.kultur-bottom .icon{
+  height: 30px;
+  width: 30px;
+  margin-bottom: 20px;
+}
+.kultur-item h2{
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+/* Kultur End */
+
+
+/* Frøer vs Tudser */
+.frogtoad{
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.frogtoad-header h1{
+  margin-bottom: 50px;
+  }
+.frogtoad-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.frogtoad-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.frogtoad-info{
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2a9614;
+}
+.frogtoad-info h1{
+  font-size: 3rem;
+  font-weight: 500;
+}
+.frogtoad-info h2{
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.frogtoad-img{
+  flex-basis: 50%;
+  height: 300px;
+  overflow: hidden;
+}
+.frogtoad-img img{
+  transition: .3s ease transform;
+}
+.frogtoad-item:hover .frogtoad-img img{
+  transform: scale(1.1);
+}
+/* Frøer vs Tudser End*/
+
+/* Keyframes */
+@keyframes text_reveal_box{
+  50%{
+    width: 100%;
+    left: 0;
+  }
+  100%{
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100%{
+    color: white;
+  }
+}
+/* Keyframes End */
