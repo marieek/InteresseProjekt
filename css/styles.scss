@@ -4,6 +4,9 @@
   margin: 0;
 	box-sizing: border-box;
 }
+body{
+  background-color: #fffdf2;
+}
 html{
 	font-size: 10px;
 	font-family: 'montserrat', sans-serif;
@@ -41,22 +44,31 @@ p{
 .section-title span{
   color: #2a9614;
 }
+.cta{
+  display: block;
+  padding: 10px 30px;
+  color: #459e3b;
+  background-color: transparent;
+  border: 2px solid #459e3b;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin: 20px auto;
+  transition: .3s ease;
+  transition-property: background-color, color;
+  text-align: center;
+  border-radius: 10px;
+}
+.cta:hover{
+  color: #2a9614;
+  background-color: #459e3b;
+}
 /* Hero Section */
 .hero{
-  background-image:url(../images/HeroBG.png);
+  background-image:url(../images/HeroBGTest.png);
   background-size: cover;
   background-position: top center;
   position: relative;
-  z-index: 1;
-}
-.hero::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
 }
 .hero h1{
   display: block;
@@ -76,23 +88,7 @@ p{
   background-color: white;
   animation: text_reveal_box 1s ease;
   animation-delay: 1s;
-}
-.hero .cta{
-  display: inline-block;
-  padding: 10px 30px;
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  margin-top: 20px;
-  transition: .3s ease;
-  transition-property: background-color, color;
-}
-.hero .cta:hover{
-  color: black;
-  background-color: white;
+  border-radius: 10px;
 }
 /* Hero Section End */
 
@@ -162,12 +158,13 @@ p{
   flex-direction: column;
 }
 .frogtoad-item{
+  flex-basis: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
-  margin: 20px auto;
+  max-width: 500px;
+  margin: 10px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -189,10 +186,12 @@ p{
   font-size: 1.8rem;
   font-weight: 300;
   margin-top: 10px;
+  margin-bottom: 5px;
 }
 .frogtoad-img{
   flex-basis: 50%;
-  height: 300px;
+  width: 100%;
+  height: auto;
   overflow: hidden;
 }
 .frogtoad-img img{
@@ -201,7 +200,79 @@ p{
 .frogtoad-item:hover .frogtoad-img img{
   transform: scale(1.1);
 }
-/* Frøer vs Tudser End*/
+.readmore{
+  margin-bottom: 20px;
+}
+/* Frøer vs Tudser End */
+
+
+/*Fakta*/
+.fakta{
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+.col-left{
+  width: 250px;
+  height: 360px;
+  }
+.col-right{
+  width: 100%;
+  }
+.frogcon{
+  display: inline-block;
+  margin-bottom: 20px;
+  width: 30px;
+  height: 30px;
+}
+.col-right p{
+  margin-bottom: 20px;
+}
+.col-right .cta{
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+.col-left .fakta-img{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border: 10px solid #fffdf2;
+}
+.col-left .fakta-img::after{
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 19px;
+  height: 98%;
+  width: 98%;
+  border: 7px solid #2a9614;
+  z-index: -1;
+}
+.cta-bottom{
+  display: block;
+  padding: 10px 30px;
+  color: #459e3b;
+  background-color: transparent;
+  border: 2px solid #459e3b;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin: 20px auto;
+  transition: .3s ease;
+  transition-property: background-color, color;
+  text-align: center;
+  border-radius: 10px;
+  width: 150px;
+}
+.cta-bottom:hover{
+  color: #2a9614;
+  background-color: #459e3b;
+}
+/*Fakta End*/
 
 /* Keyframes */
 @keyframes text_reveal_box{
