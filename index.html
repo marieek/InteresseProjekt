@@ -31,12 +31,23 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+		const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+		const menu_item = document.querySelector('.header .nav-bar .nav-list ul li a');
+		const header = document.querySelector('.header .container')
+
+		hamburger.addEventListener('click',() =>{
+			hamburger.classList.toggle('active');
+			mobile_menu.classList.toggle('active');
+		});
+	</script>
 </section>
 
 <!-- END Header -->
 
 <audio id="ribbit">
-	<source src="sounds/ribbit.mp3" type="audio/mpeg">
+	<source src="sounds/ribbit2.mp3" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
 <!--Hero Section-->
@@ -44,7 +55,7 @@
 	<div class="hero container">
 		<div>
 			<h1>Frøer<span></span></h1>
-			<a href="#" type="button" class="cta" onclick="playAudio()">Kvæk </a>
+			<a href="#" type="button" class="cta" onclick="playAudio()">Kvæk</a>
 		</div>
 	</div>
 
@@ -109,9 +120,12 @@
 				<div class="frogtoad-info">
 					<h1>Kermit the Frog</h1>
 					<h2>The Muppet Show, Sesame Street, Sam and Friends</h2>
-					<p>Kermit debuterede i 1955 i samarbejde med sin ven Jim Henson, på showet Sam and Friends.</p>
-					<p><strong>MERE INFO OM KERMIT</strong></p>
-				</div>
+					<p>Kermit debuterede i 1955 i samarbejde med sin ven Jim Henson, på showet Sam and
+						Friends. Siden da har Kermit især gjort sig bemærket som vært på The Muppet Show
+						og som skuespiller i klassiske film som The Muppet Christmas Carol. Hans travle
+						karriere har resulteret i to stjerner på the Hollywood Walk of Fame samt utallige priser
+						og en popularitet der har været flere generationer.</p>
+					</div>
 				<div class="frogtoad-img">
 					<img src="images/Kermits.jpg" height="226" width="280" alt="img"/>
 
@@ -125,7 +139,7 @@
 					<h2>Kaj og Andrea</h2>
 					<p>Kaj er en frø, mand!</p>
 					<p>Han har været et ikon fra starten. Da han mødte Andrea første gang var hans svar til Andreas <i>"Pænt god morgen. Jeg hedder Andrea, hvad hedder du?”</i> <i>”Hvad kommer det dig ved?”</i></p>
-					<p>Kajs stil er tidsløs. Hans blomstrede vest med lyserød sløjfe er noget designere drømmer om at designe og vise på catwalken.</p>
+					<p>Kajs stil er tidsløs. Hans blomstrede vest med lyserød sløjfe er noget designere drømmer om at kreere og vise på catwalken.</p>
 					<p>I sin fritid hører han rap-musik på sin gå-mand, spiser popcorn, leger med Andrea eller roder med teknik da han er "teknikkens betvinger".</p>
 				</div>
 				<div class="frogtoad-img">
@@ -138,11 +152,11 @@
 				<div class="frogtoad-info">
 					<h1>Frø</h1>
 					<h2>Frø og Tudse</h2>
-					<p>Frø er Tudses modpart. Den langbenede grønne padde er en afslappet fyr. Han elsker foråret og sin bedsteven Tudse.</p>
-					<p>Både Frø og Tudse vil gøre alt for at gøre den anden glad.</p>
-					<p>Historierne blev skrevet af Arnold Lobel. Et par år efter udgivelsen af den første Frø og Tudse bog, sprang han ud til sin familie. Hans datter mener at der er en sammenhæng mellem historierne og hans egen seksualitet.</p>
-					<p>Frø og Tudse ses i dag som queer icons, og fejres af fællesskabet.</p>
-					<p><strong>MERE OM FRØ</strong></p>
+					<p>Frø er Tudses modpart i Arnold Lobels Frø og Tudse-bøger. Den langbenede grønne padde er en afslappet fyr. Han elsker foråret og sin bedsteven Tudse.
+					Både Frø og Tudse vil gøre alt for at gøre den anden glad.</p>
+					<p>Et par år efter udgivelsen af den første Frø og Tudse-bog, sprang Lobel ud til sin familie.
+						Hans datter mener at der er en sammenhæng mellem historierne og hans egen
+						seksualitet. Frø og Tudse ses i dag som queer icons, og fejres af fællesskabet.</p>
 				</div>
 				<div class="frogtoad-img">
 					<img src="images/Frø.jpg" height="768" width="884" alt="img"/>
@@ -154,10 +168,13 @@
 				<div class="frogtoad-info">
 					<h1>Jason Funderburker</h1>
 					<h2>Over the Garden Wall</h2>
-					<p>Det ydmyg multitalent Jason Funderburker kan ikke kun tale, men kan også synge og spille klaver. Man skal dog være heldig hvis man vil opleve frøens talent, da han det meste af tiden slapper af i Gregs arme, eller hopper afsted på egne eventyr.</p>
-					<p>Gregs kompagnon i The Unknown. </p>
-					<p>Jason Funderburker er det endelige navn frøen får i Over the Garden Wall, gennem fortællingen har han i alt 10 kælenavne. Desuden har han 3 andre kælenavne i tegneseriebøgerne</p>
-					<p>Jeg kan varmt anbefale Over the Garden Wall. Det er en sød historie om to halvbrødres rejse i gennem The Unknown.</p>
+					<p>Denne frø er Gregs kompagnon i The Unknown i serien Over the Garden Wall. Det
+						ydmyge multitalent Jason Funderburker kan ikke kun tale, men kan også synge og
+						spille klaver. Man skal dog være heldig hvis man vil opleve frøens talent, da han det
+						meste af tiden slapper af i Gregs arme, eller hopper afsted på egne eventyr.</p>
+					<p>Jason Funderburker er det endelige navn frøen får i Over the Garden Wall, men
+						gennem fortællingen har han i alt 10 kælenavne. Desuden har han 3 andre kælenavne i
+						tegneseriebøgerne.</p>
 				</div>
 				<div class="frogtoad-img">
 					<img src="images/Jason.jpg"/>
@@ -237,11 +254,6 @@
 	</div>
 </section>
 <!-- END footer -->
-
-
-
-
-<script src="app.js"></script>
 
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
