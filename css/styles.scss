@@ -4,12 +4,20 @@
   margin: 0;
 	box-sizing: border-box;
 }
+/*farver*/
+$green:#2a9614;
+$greenlight:#459e3b;
+$baggrund:#fffdf2;
+$menufarve: #fdfadd;
+/*END farver*/
+
 body{
-  background-color: #fffdf2;
+  background-color: $baggrund;
 }
 html{
 	font-size: 10px;
 	font-family: 'montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 a{
   text-decoration: none;
@@ -42,14 +50,14 @@ p{
   text-align: center;
 }
 .section-title span{
-  color: #2a9614;
+  color: $green;
 }
 .cta{
   display: block;
   padding: 10px 30px;
-  color: #459e3b;
+  color: $greenlight;
   background-color: transparent;
-  border: 2px solid #459e3b;
+  border: 2px solid $greenlight;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
@@ -60,20 +68,149 @@ p{
   border-radius: 10px;
 }
 .cta:hover{
-  color: #2a9614;
-  background-color: #459e3b;
+  color: $green;
+  background-color: $greenlight;
 }
+.brand h1{
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.brand h1 span{
+  color: $green;
+}
+/* Header Section */
+.header{
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  min-height: 8vh;
+  background-color: $baggrund;
+}
+.nav-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  padding: 0 10px;
+}
+.nav-list ul{
+  list-style: none;
+  position: absolute;
+  background-color: $baggrund;
+  width: 100vw;
+  height: 100vh;
+  left: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: .5s ease left;
+}
+.nav-list ul.active{
+  left: 0;
+}
+
+.nav-list ul a{
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: .2rem;
+  text-decoration: none;
+  color: $green;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+}
+.nav-list ul a::after{
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: $menufarve;
+  font-size: 10rem;
+  letter-spacing: 50px;
+  display: block;
+  z-index: -1;
+  transition: .3s ease letter-spacing;
+}
+.nav-list ul li:hover a::after{
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
+}
+.nav-list ul li:hover a{
+  text-decoration: underline;
+}
+
+.hamburger{
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border: 3px solid $green;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transform: scale(.8);
+  margin-right: 20px;
+}
+.hamburger .bar{
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: $green;
+  z-index: -1;
+  transform: scale(.8);
+}
+.hamburger .bar::after,
+.hamburger .bar::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: $green;
+  transition: .3s ease;
+  transition-property: top, bottom;
+}
+.hamburger .bar::after{
+  top: 8px;
+}
+.hamburger .bar::before{
+  bottom: 8px;
+}
+.hamburger.active .bar::before{
+  bottom: 0;
+}
+.hamburger.active .bar::after{
+  top: 0;
+}
+/* END header Section */
+
 /* Hero Section */
 .hero{
   background-image:url(../images/HeroBGTest.png);
   background-size: cover;
   background-position: top center;
   position: relative;
+  max-width: 100%;
+
 }
 .hero h1{
   display: block;
   width: fit-content;
-  font-size: 10rem;
+  font-size: 8rem;
   position: relative;
   color: transparent;
   animation: text_reveal .5s ease forwards;
@@ -163,7 +300,7 @@ p{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 1500px;
   margin: 10px;
   overflow: hidden;
   border-radius: 10px;
@@ -176,7 +313,7 @@ p{
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background-color: #2a9614;
+  background-color: $green;
 }
 .frogtoad-info h1{
   font-size: 3rem;
@@ -246,18 +383,18 @@ p{
   content: '';
   position: absolute;
   left: -33px;
-  top: 19px;
+  top: 40px;
   height: 98%;
   width: 98%;
-  border: 7px solid #2a9614;
+  border: 7px solid $green;
   z-index: -1;
 }
 .cta-bottom{
   display: block;
   padding: 10px 30px;
-  color: #459e3b;
+  color: $greenlight;
   background-color: transparent;
-  border: 2px solid #459e3b;
+  border: 2px solid $greenlight;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: .1rem;
@@ -269,10 +406,59 @@ p{
   width: 150px;
 }
 .cta-bottom:hover{
-  color: #2a9614;
-  background-color: #459e3b;
+  color: $green;
+  background-color: $greenlight;
 }
 /*Fakta End*/
+
+
+/*Footer*/
+.footer{
+  background-image: url(../images/box.png);
+  background-size: cover;
+  min-height: 200px;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  max-width: 100%;
+}
+.footer h2{
+  color: $green;
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.footer-icon{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.footer-item{
+  height: 30px;
+  margin: 0 5px;
+}
+.footer-item img{
+  filter: grayscale(1);
+  transition: .3s filter;
+}
+.footer-item:hover img{
+  filter: grayscale(0);
+}
+.footer p{
+  color: white;
+  font-size: 1.3rem;
+}
+/*END Footer*/
+
+
+.sidsteknap{
+  background-color: $green;
+  border-radius: 5px;
+}
+
+
 
 /* Keyframes */
 @keyframes text_reveal_box{
@@ -291,3 +477,96 @@ p{
   }
 }
 /* Keyframes End */
+
+/*Media query for tablet*/
+@media only screen and (min-width: 768px){
+  .cta{
+    font-size: 2.5rem;
+    padding: 10px 40px;
+  }
+  .section-title{
+    font-size: 5rem;
+  }
+  /*Hero*/
+  .hero h1{
+    font-size: 10rem;
+  }
+  /*END Hero*/
+
+  /*Kultur*/
+  .kultur .kultur-bottom .kultur-item{
+  flex-basis: 45%;
+    margin: 1.5%;
+    min-height: 40vh;
+  }
+  /*End Kultur*/
+
+  /*Frogtoad*/
+  .frogtoad-item{
+    flex-basis: 600px;
+    margin: 0 ;
+    width: 95%;
+    flex-direction: row;
+  }
+   .frogtoad-box .frogtoad-info{
+    height: 100%;
+  }
+  .frogtoad-box .frogtoad-img{
+    height: 100%;
+  }
+  /*End Frogtoad*/
+
+  /*Fakta*/
+  .fakta{
+    flex-direction: row;
+  }
+  .col-left{
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+  }
+.fakta .col-left .fakta-img::after{
+left: -45px;
+  top: 45px;
+  height: 98%;
+  width: 98%;
+  border: 10px solid $green;
+}
+.col-right{
+  text-align: left;
+  padding: 30px;
+}
+  .col-right h1{
+    text-align: left;
+  }
+   /*END Fakta*/
+}
+/*END Media query for tablet*/
+
+
+/*Media query for Computer*/
+@media only screen and (min-width: 1200px){
+.hamburger{
+  display: none;
+}
+.nav-list ul{
+  position: initial;
+  display: block;
+  height: auto;
+  width: fit-content;
+  background-color: transparent;
+}
+  .nav-list ul li{
+    display: inline-block;
+  }
+  .nav-list ul li a{
+    font-size: 1.8rem;
+  }
+
+  .nav-list ul a:after{
+    display: none;
+  }
+}
+
+
+/*END Media query for Computer*/

@@ -8,17 +8,54 @@
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Frog</title>
-</head>
+	<title>Frø</title>
 
+</head>
 <body>
-<!--Hero Section-->
-<div class="hero container">
-	<div>
-		<h1>Frøer<span></span></h1>
-		<a href="#" type="button" class="cta">Kvæk</a>
+<!-- Header -->
+<section id="header">
+	<div class="header container">
+		<div class="nav-bar">
+			<div class="brand">
+				<a href="#hero" style="color: black"><h1>Marie<span>EK</span></h1></a>
+			</div>
+			<div class="nav-list">
+				<div class="hamburger"><div class="bar"></div></div>
+					<ul>
+						<li><a href="#header" data-after="Frøer">Frøer</a></li>
+						<li><a href="#kultur" data-after="Facts">Facts</a></li>
+						<li><a href="#frogtoad" data-after="Kultur">Kultur</a></li>
+						<li><a href="#fakta" data-after="Frø eller Frø">Frø eller Frø</a></li>
+					</ul>
+
+			</div>
+		</div>
 	</div>
-</div>
+</section>
+
+<!-- END Header -->
+
+<audio id="ribbit">
+	<source src="sounds/ribbit.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+<!--Hero Section-->
+<section id="hero">
+	<div class="hero container">
+		<div>
+			<h1>Frøer<span></span></h1>
+			<a href="#" type="button" class="cta" onclick="playAudio()">Kvæk </a>
+		</div>
+	</div>
+
+	<script>
+		var x = document.getElementById("ribbit");
+
+		function playAudio() {
+			x.play();
+		}
+	</script>
+</section>
 <!--Hero Section End-->
 
 <!-- FACTS -->
@@ -31,7 +68,7 @@
 			<div class="kultur-item">
 				<div class="icon"><img src="https://img.icons8.com/ios-glyphs/30/000000/frog.png"/></div>
 				<h2>Baby</h2>
-				<p>Frøen Pipa pipa, lægger op til 100 æg, som bliver indlejret i hunnens ryg i 12-20 uger, indtil de små frøer er store nok til at klar sig selv.</p>
+				<p>Frøen Pipa pipa, lægger op til 100 æg, som bliver indlejret i hunnens ryg i 12-20 uger, indtil de små frøer er store nok til at klare sig selv.</p>
 				<p>Hos frøen Rhinoderma darwinii, går det lidt anderledes til. Hannen hapser haletudserne ind i munden og holder dem i sin vokalsæk, hvor de bliver til de er færdige med at vokse.</p>
 			</div>
 			<div class="kultur-item">
@@ -42,8 +79,8 @@
 			<div class="kultur-item">
 				<div class="icon"><img src="https://img.icons8.com/ios-glyphs/30/000000/frog.png"/></div>
 				<h2>Isterning</h2>
-				<p>Den lille frø Lithobates sylvaticus, kan overleve kolde vintre ved at lade sig fryse. I sin krop danner den en slags frostvæske, der sørger for at den ikke ender som en livløs isterning.</p>
-				<p>Når årstiderne skifter og temperaturen stiger, tør frøen op og hopper videre som var intet sket.</p>
+				<p>Den lille frø Lithobates sylvaticus, kan overleve kolde vintre ved at lade sig fryse. I sin krop danner den en slags frostvæske, der sørger for at den ikke ender som en livløs isterning.
+				Når årstiderne skifter og temperaturen stiger, tør frøen op og hopper videre som var intet sket.</p>
 			</div>
 			<div class="kultur-item">
 				<div class="icon"><img src="https://img.icons8.com/ios-glyphs/30/000000/frog.png"/></div>
@@ -53,7 +90,7 @@
 			</div>
 
 		</div>
-		<a href="https://www.smithsonianmag.com/science-nature/14-fun-facts-about-frogs-180947089/" target="_blank" class="readmore">Læs flere frø-facts her</a>
+		<a href="https://www.smithsonianmag.com/science-nature/14-fun-facts-about-frogs-180947089/" target="_blank" class="readmore" style="color: #2A9614FF; text-decoration: underline">Læs flere frø-facts her</a>
 
 	</div>
 </section>
@@ -65,7 +102,7 @@
 	<div class="frogtoad container">
 		<div class="frogtoad-header">
 			<h1 class="section-title">K<span>u</span>lt<span>u</span>r</h1>
-			<p>Prominente frøer i kulturen.</p>
+			<h2>Prominente frøer i kulturen.</h2>
 		</div>
 		<div class="frogtoad-box">
 			<div class="frogtoad-item">
@@ -76,11 +113,11 @@
 					<p><strong>MERE INFO OM KERMIT</strong></p>
 				</div>
 				<div class="frogtoad-img">
-					<img src="images/Kermits.jpg" height="201" width="220" alt="img"/>
+					<img src="images/Kermits.jpg" height="226" width="280" alt="img"/>
 
 				</div>
 			</div>
-			<a href="https://muppet.fandom.com/wiki/Kermit_the_Frog" target="_blank" class="readmore">Læs mere om Kermit the Frog her</a>
+			<a href="https://muppet.fandom.com/wiki/Kermit_the_Frog" target="_blank" class="readmore" style="color: #2A9614FF; text-decoration: underline">Læs mere om Kermit the Frog her</a>
 
 			<div class="frogtoad-item">
 				<div class="frogtoad-info">
@@ -92,10 +129,10 @@
 					<p>I sin fritid hører han rap-musik på sin gå-mand, spiser popcorn, leger med Andrea eller roder med teknik da han er "teknikkens betvinger".</p>
 				</div>
 				<div class="frogtoad-img">
-					<img src="images/Kaj.jpg" height="354" width="355" alt="img"/>
+					<img src="images/Kaj.jpg" height="388" width="848" alt="img"/>
 				</div>
 			</div>
-			<a href="http://www5.kb.dk/da/nb/samling/ma/fokus/ugens_hit/uge_45_Kaj_og_Andrea.html" target="_blank" class="readmore">Læs mere om Kaj (og Andrea) her</a>
+			<a href="http://www5.kb.dk/da/nb/samling/ma/fokus/ugens_hit/uge_45_Kaj_og_Andrea.html" target="_blank" class="readmore" style="color: #2A9614FF; text-decoration: underline">Læs mere om Kaj (og Andrea) her</a>
 
 			<div class="frogtoad-item">
 				<div class="frogtoad-info">
@@ -108,10 +145,10 @@
 					<p><strong>MERE OM FRØ</strong></p>
 				</div>
 				<div class="frogtoad-img">
-					<img src="images/Frø.jpg" height="314" width="220" alt="img"/>
+					<img src="images/Frø.jpg" height="768" width="884" alt="img"/>
 				</div>
 			</div>
-			<a href="https://www.newyorker.com/books/page-turner/frog-and-toad-an-amphibious-celebration-of-same-sex-love" target="_blank" class="readmore">Læs mere om Frog her</a>
+			<a href="https://www.newyorker.com/books/page-turner/frog-and-toad-an-amphibious-celebration-of-same-sex-love" target="_blank" class="readmore" style="color: #2A9614FF; text-decoration: underline">Læs mere om Frø her</a>
 
 			<div class="frogtoad-item">
 				<div class="frogtoad-info">
@@ -126,7 +163,7 @@
 					<img src="images/Jason.jpg"/>
 				</div>
 			</div>
-			<a href="https://over-the-garden-wall.fandom.com/wiki/Jason_Funderburker_(the_frog)" target="_blank" class="readmore">Læs mere om Jason Funderburker her - men pas på spoilers</a>
+			<a href="https://over-the-garden-wall.fandom.com/wiki/Jason_Funderburker_(the_frog)" target="_blank" class="readmore" style="color: #2A9614FF; text-decoration: underline">Læs mere om Jason Funderburker her - men pas på spoilers</a>
 		</div>
 	</div>
 </section>
@@ -138,23 +175,74 @@
 	<div class="fakta container">
 		<div class="col-left">
 			<div class="fakta-img">
-				<img src="images/placeholder.png" alt="img"></div>
+				<img src="images/placeholder.png" alt="img">
+			</div>
 		</div>
 		<div class="col-right">
 			<h1 class="section-title"><span>Frø</span> eller <span>frø</span></h1>
 			<div class="frogcon"><img src="https://img.icons8.com/ios-glyphs/30/000000/frog-face.png"/></div>
 			<p>Hvis du først nu har fundet ud af at det var den anden slags frø du ledte efter, og ikke typen der siger kvæk, så var det da på tide.</p>
-			<p>Jeg håber du fik noget ud af at kigge på min side. Måske blev du inspireret til at gøre naturen omkring dig mere frø-venlig. Du kunne jo grave en dam i din vens have - husk at lave siderne skrå så frøerne kan hoppe ud hvis de skal en tur på land, samtidig kan du smide en håndfuld blomster frø til bierne!</p>
+			<p>Jeg håber du fik noget ud af at kigge på min side. Måske blev du inspireret til at gøre naturen omkring dig mere frø-venlig. Du kunne jo grave en dam i din vens have - husk at lave siderne skrå så frøerne kan hoppe ud hvis de skal en tur på land, samtidig kan du smide en håndfuld blomsterfrø til bierne!</p>
 			<p>Hav en frøgtelig dag.</p>
-			<a href="#" class="cta-bottom">Kvæk</a>
+
+			<audio id="ribbit2">
+				<source src="sounds/ribbit2.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+
+			<a href="#/" type="button" class="cta-bottom" onclick="playAudio()">Kvæk </a>
+
+			<script>
+				var x = document.getElementById("ribbit2");{
+					x.play();
+				}
+			</script>
+
 		</div>
 	</div>
 </section>
 <!-- Frø End -->
 
 <!-- Footer -->
-<p>Footer</p>
+<section id="footer">
+	<div class="footer container">
+		<div class="brand"><h1>Marie<span>EK</span></h1></div>
+		<h2>En side om frøer</h2>
+		<div class="footer-icon">
+			<div class="footer-item">
+				<!-- Button trigger modal -->
+				<button type="button" class="sidsteknap" data-bs-toggle="modal" data-bs-target="#exampleModal">
+					<img src="https://img.icons8.com/color-glass/48/000000/frog.png"/></button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Frø:</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								KVÆK!
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kvæk</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>Copyright og så videre. Det her er bunden af siden. Jeg har ikke mere at byde på denne om gang. Kom endelig tilbage en anden gang.</p>
+	</div>
+</section>
 <!-- END footer -->
+
+
+
+
+<script src="app.js"></script>
+
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
